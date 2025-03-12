@@ -1,0 +1,36 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial;
+    background-image: linear-gradient(90deg, #545454,#d3d3d3);
+}
+
+.cabeçalho{
+    background-color: #333;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 1em;
+}
+
+.conteudo{
+    background-color: white;
+    margin: 6em;
+    border-radius: 2em;
+    border: 2px solid black;
+    flex: 1;
+}
+
+footer{
+    background-color: #333;
+    text-align: center;
+    color: white;
+    padding: 1em;
+}
+
+.conversor{
+    margin: 4em;
+}
