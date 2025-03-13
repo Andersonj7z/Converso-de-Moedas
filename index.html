@@ -10,31 +10,51 @@
 <body>
     <header>
         <h1 class="cabeçalho">Conversor de Moedas</h1>
+        <img class="moeda img-fluid mx-3" src="img/moeda2.png" alt="Ícone de moeda" width="70">
+
     </header>
 
     <div class="conteudo">
         <div class="conversor">
-            <label for="Valor">Valor</label>
-            <input type="number" id="valor" placeholder="0,00">
+            <div class="input-container">
+                <label>Valor</label>
+                <input type="number" id="valor" placeholder="0,00">
+            </div>
+            <div class="input-container">
+                <label for="converte-de">Converte de</label>
+                <select id="converte-de">
+                    <option value="BRL">Real (BRL)</option>
+                    <option value="USD">Dólar (USD)</option>
+                </select>
+            </div>
 
-            <label for="converte-de">Converte de</label>
-            <select id="converte-de">
-                <option value="BRL">Real (BRL)</option>
-                <option value="USD">Dólar (USD)</option>
-            </select>
+            <div class="input-container">
+                <label for="converte-para">Para</label>
+                <select id="converte-para">
+                    <option value="USD">Dólar (USD)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="BRL">Real (BRL)</option>
+                </select>
+            </div>
 
-            <label for="converte-para">Para</label>
-            <select id="converte-para">
-                <option value="USD">Dólar (USD)</option>
-                <option value="EUR">Euro (EUR)</option>
-                <option value="BRL">Real (BRL)</option>
-            </select>
+            <button class="btn-calcular" onclick="ConverterMoeda()">Calcular</button>
 
-            <button onclick="ConverterMoeda()">Calcular</button>
-            <p id="resultado"></p>
+
+            <p class="resultado-titulo"><strong>Resultado da Conversão</strong></p>
+            <div class="resultado resultado-conversao">
+                <p>Conversão de: <span id="moeda-de">Real (BRL)</span></p>
+                <p>Valor a converter: <span id="valor-converter">0,00</span></p>
+                <p>Para: <span id="moeda-para">Dólar (USD)</span></p>
+                <p>Resultado da conversão: <span id="resultado">0,00</span></p>
+            </div>
+
+            <div class="cotação">
+                <p>Data cotação Ultilizada: 10/03/2025</p>
+                <p>1 Real/BRL = 0,17 Dólar/USD</p>
+                <p>1 Dólar/USD = 5,79 Real/BRL</p>
+            </div>
         </div>
     </div>
-
     <footer>
         <p>&copy; Jose Silva - Todos os direitos reservados</p>
     </footer>
