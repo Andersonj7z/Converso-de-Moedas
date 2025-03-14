@@ -7,6 +7,7 @@ body{
     background-image: linear-gradient(90deg, #545454,#d3d3d3);
 }
 
+/*Cabeçalho*/
 .cabeçalho{
     background-color: #333;
     color: white;
@@ -16,6 +17,7 @@ body{
     padding: 1em;
 }
 
+/*Íconr Moeda*/
 .moeda{
     width: 70px;
     height: auto;
@@ -24,9 +26,27 @@ body{
     top: 25px;
 }
 
+
+
+/*Container Principal*/
+.conteudo{
+    background-color: #d9d9d9;
+    margin: 6em;
+    border-radius: 2em;
+    border: 2px solid black;
+    text-align: center;
+    flex: 1;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+/* Inputs e botões */
+
 .input-container {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
 .input-container label {
@@ -35,39 +55,56 @@ body{
     left: 0;
 }
 
-.conteudo{
-    background-color: #d3d3d3;
-    margin: 6em;
-    border-radius: 2em;
-    border: 2px solid black;
-    text-align: center;
-    flex: 1;
+.btn-calcular{
+    width: 100%;
+    background-color: #d9d9d9;
+    color: black;
+    padding: 4px;
+    transition: 0.3s;
 }
 
-.resultado-titulo {
+button:hover {
+    background: #adadad;
+}
+
+/* Resultados */
+
+.resultado-titulo{
     text-align: left;
-    margin-top: 20px;
-    margin-left: 4em;
 }
 
 .resultado-conversao {
     border: 1px solid black;
-    background-color: #d3d3d3;
-    padding: 10px;
-    border-radius: 0px;
+    background-color: #d9d9d9;
+    padding: 15px;
     text-align: left;
-    margin-top: 15px;
 }
 
+.resultado-conversao2 {
+    border: 1px solid black;
+    background-color: #d9d9d9;
+    margin-top: 16px;
+    padding: 15px;
+    text-align: left;
+}
+
+/*Converso*/
 
 .conversor{
     margin: 4em;
 }
 
-button:hover {
-    background: #d3d3d3;
+.conversor input{
+    padding: 4px;
 }
 
+.conversor select {
+  padding: 7px;
+  border: 1px solid black;
+  background: #d9d9d9;
+}
+
+/*footer*/
 footer{
     background-color: #333;
     position: absolute;
@@ -76,22 +113,27 @@ footer{
     color: white;
     bottom: 0%;
 }
+
 @media (max-width: 768px) {
     
     .cabeçalho{
-        background-color: #333 !important;
-        color: white !important;
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-        text-align: center !important;
-        padding: 1em !important;
+        font-size: 1.5em !important;
+        flex-direction: column !important;
+        padding: 1em !;
+    }
+
+    .moeda {
+        width: 40px !important;
+        margin: 10px 0 !important;
+    }
+
+    .resultado-conversao,
+    .resultado-conversao2 {
+        text-align: center;
     }
     
     #conteudo{
-        background-color: white !important;
-        margin: 6em !important;
-        border-radius: 2em !important;
-        border: 2px solid black !important;
-        flex: 1 !important;
-    } 
+        margin: 2em auto !important;
+        padding: 1.5em !important;
+    }
 }
