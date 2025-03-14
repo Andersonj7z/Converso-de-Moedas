@@ -1,9 +1,8 @@
 body {
     height: 100%;
     margin: 0;
-    display: flex;
-    flex-direction: column;
     font-family: Arial;
+    font-size: larger;
     background-image: linear-gradient(90deg, #545454, #d3d3d3);
 }
 
@@ -34,8 +33,8 @@ header {
     border-radius: 2em;
     border: 1px solid black;
     text-align: center;
-    flex: 1;
     padding: 5em;
+    padding-bottom: 100px;
     margin: 5em;
 }
 
@@ -60,7 +59,7 @@ header {
     transition: 0.3s;
 }
 
-button:hover {
+.btn-calcular:hover {
     background: #adadad;
 }
 
@@ -89,25 +88,34 @@ button:hover {
 }
 
 /* Footer */
-footer {
+footer{
     background-color: #333;
-    width: 100%;
-    text-align: center;
     color: white;
-    bottom: 0;
-    padding: 1em;
+    padding: 10px;
+    text-align: center;
 }
 
+
 @media (max-width: 768px) {
-    
+    footer {
+        font-size: 15px !important;
+        padding: 5px !important;
+        text-align: center !important;
+    }
+
     .cabeçalho{
         font-size: 1.5em !important;
-        
     }
 
     .conversor input#valor {
+
         width: 100% !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 10px !important;
+        margin-top: 20px !important;
+    }
+
+    .converte-de{
+        margin-top: 20px !important;
     }
 
     .moeda {
@@ -127,5 +135,13 @@ footer {
         flex: 1 !important;
         padding: 1vh !important;
         margin: 9% !important;
+    }
+
+    .input-container label {
+        top: 0em !important;
+    }
+
+    main{
+        padding-bottom: 70px !important;
     }
 }
