@@ -6,7 +6,7 @@ function ConverterMoeda() {
     const moedaOrigem = document.getElementById("converte-de").value;
     const moedaDestino = document.getElementById("converte-para").value;
 
-    // Taxas de câmbio fixas (ajustadas conforme seu HTML)
+    // Taxas de câmbio fixas
     const taxasCambio = {
         BRL: { USD: 0.17, EUR: 0.16, BRL: 1 },
         USD: { BRL: 5.79, EUR: 0.94, USD: 1 },

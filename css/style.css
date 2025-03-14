@@ -1,24 +1,26 @@
-body{
+body {
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
     font-family: Arial;
-    background-image: linear-gradient(90deg, #545454,#d3d3d3);
+    background-image: linear-gradient(90deg, #545454, #d3d3d3);
 }
 
-/*Cabeçalho*/
-.cabeçalho{
+/* Cabeçalho */
+.cabeçalho {
     background-color: #333;
     color: white;
-    margin-top: 0;
-    margin-bottom: 0;
     text-align: center;
     padding: 1em;
 }
 
-/*Íconr Moeda*/
-.moeda{
+header {
+    flex-shrink: 0;
+}
+
+/* Ícone Moeda */
+.moeda {
     width: 70px;
     height: auto;
     position: absolute;
@@ -26,27 +28,22 @@ body{
     top: 25px;
 }
 
-
-
-/*Container Principal*/
-.conteudo{
+/* Container Principal */
+.conteudo {
     background-color: #d9d9d9;
-    margin: 6em;
     border-radius: 2em;
-    border: 2px solid black;
+    border: 1px solid black;
     text-align: center;
     flex: 1;
-    margin-left: 25%;
-    margin-right: 25%;
+    padding: 5em;
+    margin: 5em;
 }
 
 /* Inputs e botões */
-
 .input-container {
     position: relative;
     display: inline-flex;
-    margin-left: 12px;
-    margin-right: 12px;
+    padding: 8px;
 }
 
 .input-container label {
@@ -55,7 +52,7 @@ body{
     left: 0;
 }
 
-.btn-calcular{
+.btn-calcular {
     width: 100%;
     background-color: #d9d9d9;
     color: black;
@@ -68,72 +65,67 @@ button:hover {
 }
 
 /* Resultados */
-
-.resultado-titulo{
+.resultado-titulo {
     text-align: left;
 }
 
-.resultado-conversao {
-    border: 1px solid black;
-    background-color: #d9d9d9;
-    padding: 15px;
-    text-align: left;
-}
-
+.resultado-conversao,
 .resultado-conversao2 {
     border: 1px solid black;
     background-color: #d9d9d9;
-    margin-top: 16px;
     padding: 15px;
     text-align: left;
+    margin-top: 16px;
 }
 
-/*Converso*/
-
-.conversor{
-    margin: 4em;
-}
-
+/* Conversor */
 .conversor input{
-    padding: 4px;
+    background: #d9d9d9
 }
-
 .conversor select {
-  padding: 7px;
-  border: 1px solid black;
-  background: #d9d9d9;
+    padding: 7px;
+    border: 1px solid black;
+    background: #d9d9d9;
 }
 
-/*footer*/
-footer{
+/* Footer */
+footer {
     background-color: #333;
-    position: absolute;
     width: 100%;
     text-align: center;
     color: white;
-    bottom: 0%;
+    bottom: 0;
+    padding: 1em;
 }
 
 @media (max-width: 768px) {
     
     .cabeçalho{
         font-size: 1.5em !important;
-        flex-direction: column !important;
-        padding: 1em !;
+        
+    }
+
+    .conversor input#valor {
+        width: 100% !important;
+        margin-bottom: 20px !important;
     }
 
     .moeda {
         width: 40px !important;
-        margin: 10px 0 !important;
     }
 
     .resultado-conversao,
     .resultado-conversao2 {
-        text-align: center;
+        text-align: center !important;
     }
     
-    #conteudo{
-        margin: 2em auto !important;
-        padding: 1.5em !important;
+    .conteudo {
+        background-color: #d9d9d9 !;
+        border-radius: 2em !important;
+        border: 1px solid black !important;
+        text-align: center !important;
+        flex: 1 !important;
+        padding: 1vh !important;
+        margin: 9% !important;
     }
 }
